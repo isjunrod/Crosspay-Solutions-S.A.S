@@ -2,6 +2,19 @@
 
 > **"Mientras otros luchan con configuraciones complejas de bases de datos, CrossPay revoluciona la experiencia del revisor con configuración instantánea y cero complejidad."**
 
+## 🌐 **DEMO EN VIVO**
+
+### **🔥 URLs de Producción:**
+- **Frontend**: https://crosspay-solutions-front.vercel.app
+- **Backend API**: https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api
+- **Credenciales Demo**: `prueba123@gmail.com` / `prueba123`
+
+### **💻 URLs de Desarrollo:**
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:3001/api
+
+---
+
 ## ⚡ **CONFIGURACIÓN INSTANTÁNEA**
 
 ```bash

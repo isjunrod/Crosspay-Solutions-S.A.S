@@ -15,9 +15,10 @@ import {
 } from './authTypes';
 
 const API_URL =
-  process.env.NODE_ENV === 'production' 
+  process.env.NEXT_PUBLIC_API_URL || 
+  (process.env.NODE_ENV === 'production' 
     ? 'https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api' 
-    : 'http://localhost:3001/api';
+    : 'http://localhost:3001/api');
 
 // Action creators
 export const loginStart = (): AuthActionTypes => ({
