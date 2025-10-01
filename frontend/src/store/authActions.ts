@@ -20,6 +20,11 @@ const API_URL =
     ? 'https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api' 
     : 'http://localhost:3001/api');
 
+// Debug para verificar la URL
+console.log('🔧 API_URL:', API_URL);
+console.log('🔧 NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL);
+console.log('🔧 NODE_ENV:', process.env.NODE_ENV);
+
 // Action creators
 export const loginStart = (): AuthActionTypes => ({
   type: AUTH_LOGIN_START,

@@ -22,6 +22,9 @@ const API_URL =
     ? 'https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api' 
     : 'http://localhost:3001/api');
 
+// Debug para verificar la URL
+console.log('🔧 PAYMENTS API_URL:', API_URL);
+
 // Configure axios to include auth headers
 const getAuthHeaders = () => {
   const token =
