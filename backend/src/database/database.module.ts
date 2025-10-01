@@ -1,17 +1,18 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ConfigModule } from '@nestjs/config';
 import { DatabaseService } from './database.service';
 
 @Module({
   imports: [
     MongooseModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: async () => {
-        const databaseService = new DatabaseService();
-        const uri = await databaseService.getConnectionUri();
-        return { uri };
+      useFactory: async (databaseService: DatabaseService) => {
+        await databaseService.onModuleInit();
+        const uri = await databaseService.getMongoUri(); // Cambié getConnectionUri por getMongoUri
+        return {
+          uri,
+        };
       },
+      inject: [DatabaseService],
     }),
   ],
   providers: [DatabaseService],
