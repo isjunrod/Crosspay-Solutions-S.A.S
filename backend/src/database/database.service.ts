@@ -1,9 +1,8 @@
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
-import { MongoMemoryServer } from 'mongodb-memory-server';
 
 @Injectable()
 export class DatabaseService implements OnModuleInit, OnModuleDestroy {
-  private mongod: MongoMemoryServer;
+  private mongod: any; // Cambiar el tipo para evitar import estático
   public mongoUri: string;
 
   async onModuleInit() {
@@ -12,10 +11,11 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
       console.log('🌐 Usando MongoDB en la nube para producción');
       this.mongoUri = process.env.MONGODB_URI;
     } else {
-      // Usar MongoDB Memory Server solo en desarrollo
+      // Import dinámico solo en desarrollo
       console.log(
         '🧪 Modo desarrollo local - Iniciando MongoDB Memory Server...'
       );
+      const { MongoMemoryServer } = await import('mongodb-memory-server');
       this.mongod = await MongoMemoryServer.create();
       this.mongoUri = this.mongod.getUri();
       console.log(`✅ MongoDB Memory Server listo: ${this.mongoUri}`);
