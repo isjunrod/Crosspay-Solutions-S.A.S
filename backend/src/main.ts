@@ -7,7 +7,10 @@ async function bootstrap() {
 
   // CORS
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin:
+      process.env.NODE_ENV === 'production'
+        ? ['https://crosspay-solutions-front.vercel.app', 'https://crosspay-solutions-front.vercel.app/']
+        : 'http://localhost:3000',
     credentials: true,
   });
 
