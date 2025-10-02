@@ -160,15 +160,3 @@ GET https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/payments
 Authorization: Bearer <token>
 ```
 
-## 🔧 **COMANDOS DISPONIBLES**
-
-```bash
-# Instalar dependencias en frontend y backend
-npm run install:all
-
-# Ejecutar backend (Puerto 3001)
-npm run start:backend
-
-# Ejecutar frontend (Puerto 3000)
-npm run start:frontend
-```
