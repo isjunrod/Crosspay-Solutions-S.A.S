@@ -19,7 +19,7 @@
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/isjunrod/Crosspay-Solutions-S.A.S..git
+git clone https://github.com/isjunrod/Crosspay-Solutions-S.A.S.git
 cd Crosspay-Solutions-S.A.S
 
 # 2. Instalar dependencias
