@@ -36,60 +36,6 @@ npm run start:frontend
 # ✅ MongoDB Memory Server inicializado automáticamente
 ```
 
-## 🧪 **TESTING DE LA API**
-
-### **Endpoints Disponibles:**
-
-```bash
-# Registro de usuario
-POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/auth/register
-Content-Type: application/json
-
-{
-  "email": "test@crosspay.com",
-  "password": "password123"
-}
-
-# Login de usuario
-POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/auth/login
-Content-Type: application/json
-
-{
-  "email": "test@crosspay.com",
-  "password": "password123"
-}
-
-# Crear transacción (requiere Bearer token)
-POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/payments
-Authorization: Bearer <token>
-Content-Type: application/json
-
-{
-  "amount": 100.50,
-  "cardNumber": "4111111111111111",
-  "expiryDate": "12/25",
-  "cvv": "123",
-  "cardholderName": "Juan Rodriguez"
-}
-
-# Obtener transacciones (requiere Bearer token)
-GET https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/payments
-Authorization: Bearer <token>
-```
-
-## 🔧 **COMANDOS DISPONIBLES**
-
-```bash
-# Instalar dependencias en frontend y backend
-npm run install:all
-
-# Ejecutar backend (Puerto 3001)
-npm run start:backend
-
-# Ejecutar frontend (Puerto 3000)
-npm run start:frontend
-```
-
 ## 🏆 **VENTAJA COMPETITIVA**
 
 | **CrossPay**                            | **Competidores Tradicionales**              |
@@ -178,3 +124,57 @@ CrossPay es la prueba de que cuando me contraten, van a obtener exactamente lo q
 ---
 
 _Desarrollado por alguien que cree que la excelencia técnica y la experiencia del usuario van de la mano_
+
+## 🧪 **TESTING DE LA API**
+
+### **Endpoints Disponibles:**
+
+```bash
+# Registro de usuario
+POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@crosspay.com",
+  "password": "password123"
+}
+
+# Login de usuario
+POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@crosspay.com",
+  "password": "password123"
+}
+
+# Crear transacción (requiere Bearer token)
+POST https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/payments
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "amount": 100.50,
+  "cardNumber": "4111111111111111",
+  "expiryDate": "12/25",
+  "cvv": "123",
+  "cardholderName": "Juan Rodriguez"
+}
+
+# Obtener transacciones (requiere Bearer token)
+GET https://crosspay-backend-solutions-291d394a9e6a.herokuapp.com/api/payments
+Authorization: Bearer <token>
+```
+
+## 🔧 **COMANDOS DISPONIBLES**
+
+```bash
+# Instalar dependencias en frontend y backend
+npm run install:all
+
+# Ejecutar backend (Puerto 3001)
+npm run start:backend
+
+# Ejecutar frontend (Puerto 3000)
+npm run start:frontend
+```
