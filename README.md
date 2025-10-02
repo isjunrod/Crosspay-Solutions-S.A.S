@@ -100,11 +100,11 @@ Al final, lo que importa no es la tecnología, sino resolver problemas reales pa
 
 ## Con Más Tiempo Implementaría:
 
-Seguridad Avanzada: Rate limiting, 2FA, encriptación
-Analytics: Dashboard con métricas y reportes exportables
-Testing: Cobertura completa con Jest/Cypress
-PWA: App móvil con notificaciones push
-Internacionalización: Soporte multi-idioma y multi-moneda
+- Seguridad Avanzada: Rate limiting, 2FA, encriptación
+- Analytics: Dashboard con métricas y reportes exportables
+- Testing: Cobertura completa con Jest/Cypress
+- PWA: App móvil con notificaciones push
+- Internacionalización: Soporte multi-idioma y multi-moneda
 
 ## Testing de la API
 
