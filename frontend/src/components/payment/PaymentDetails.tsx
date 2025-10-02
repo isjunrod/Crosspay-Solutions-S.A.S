@@ -9,13 +9,15 @@ interface PaymentDetailsProps {
     amount: number;
     description: string;
     onFieldChange: (field: keyof CreatePaymentRequest, value: any) => void;
+    disabled?: boolean;
 }
 
 export default function PaymentDetails({
     currency,
     amount,
     description,
-    onFieldChange
+    onFieldChange,
+    disabled = false
 }: PaymentDetailsProps) {
     return (
         <div className="space-y-4">
@@ -30,7 +32,8 @@ export default function PaymentDetails({
                     <select
                         value={currency}
                         onChange={(e) => onFieldChange('currency', e.target.value)}
-                        className="w-full h-10 px-3 rounded-md bg-white/5 border border-white/20 text-white"
+                        className="w-full h-10 px-3 rounded-md bg-white/5 border border-white/20 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={disabled}
                     >
                         <option value="USD" className="bg-gray-800">USD - Dólar Americano</option>
                         <option value="COP" className="bg-gray-800">COP - Peso Colombiano</option>
@@ -47,6 +50,7 @@ export default function PaymentDetails({
                         onChange={(e) => onFieldChange('amount', e.target.value)}
                         placeholder="0.00"
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
             </div>
@@ -58,6 +62,7 @@ export default function PaymentDetails({
                     onChange={(e) => onFieldChange('description', e.target.value)}
                     placeholder="Descripción del pago"
                     className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                    disabled={disabled}
                 />
             </div>
         </div>

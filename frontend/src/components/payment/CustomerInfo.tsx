@@ -10,6 +10,7 @@ interface CustomerInfoProps {
     customerPhone: string;
     documentType: 'cedula' | 'pasaporte';
     onFieldChange: (field: keyof CreatePaymentRequest, value: any) => void;
+    disabled?: boolean;
 }
 
 export default function CustomerInfo({
@@ -17,7 +18,8 @@ export default function CustomerInfo({
     customerEmail,
     customerPhone,
     documentType,
-    onFieldChange
+    onFieldChange,
+    disabled = false
 }: CustomerInfoProps) {
     return (
         <div className="space-y-4">
@@ -34,6 +36,7 @@ export default function CustomerInfo({
                         onChange={(e) => onFieldChange('customerName', e.target.value)}
                         placeholder="Nombre del cliente"
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
 
@@ -42,7 +45,8 @@ export default function CustomerInfo({
                     <select
                         value={documentType}
                         onChange={(e) => onFieldChange('documentType', e.target.value)}
-                        className="w-full h-10 px-3 rounded-md bg-white/5 border border-white/20 text-white"
+                        className="w-full h-10 px-3 rounded-md bg-white/5 border border-white/20 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={disabled}
                     >
                         <option value="cedula" className="bg-gray-800">Cédula</option>
                         <option value="pasaporte" className="bg-gray-800">Pasaporte</option>
@@ -62,6 +66,7 @@ export default function CustomerInfo({
                         onChange={(e) => onFieldChange('customerEmail', e.target.value)}
                         placeholder="cliente@email.com"
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
 
@@ -76,6 +81,7 @@ export default function CustomerInfo({
                         onChange={(e) => onFieldChange('customerPhone', e.target.value)}
                         placeholder="+57 300 123 4567"
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
             </div>

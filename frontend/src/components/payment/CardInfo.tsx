@@ -9,13 +9,15 @@ interface CardInfoProps {
     expirationDate: string;
     securityCode: string;
     onFieldChange: (field: keyof CreatePaymentRequest, value: any) => void;
+    disabled?: boolean;
 }
 
 export default function CardInfo({
     cardNumber,
     expirationDate,
     securityCode,
-    onFieldChange
+    onFieldChange,
+    disabled = false
 }: CardInfoProps) {
     return (
         <div className="space-y-4">
@@ -32,6 +34,7 @@ export default function CardInfo({
                     placeholder="1234 5678 9012 3456"
                     maxLength={19}
                     className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                    disabled={disabled}
                 />
             </div>
 
@@ -47,6 +50,7 @@ export default function CardInfo({
                         placeholder="MM/YY"
                         maxLength={5}
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
 
@@ -61,6 +65,7 @@ export default function CardInfo({
                         placeholder="123"
                         maxLength={4}
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/40"
+                        disabled={disabled}
                     />
                 </div>
             </div>

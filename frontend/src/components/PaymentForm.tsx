@@ -73,13 +73,15 @@ const PaymentForm: React.FC = () => {
               </Alert>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <div className={`transition-opacity duration-200 ${paymentsLoading ? 'opacity-60' : 'opacity-100'}`}>
+              <form onSubmit={handleSubmit} className="space-y-8">
               <CustomerInfo
                 customerName={formData.customerName}
                 customerEmail={formData.customerEmail || ''}
                 customerPhone={formData.customerPhone || ''}
                 documentType={formData.documentType}
                 onFieldChange={handleInputChange}
+                  disabled={paymentsLoading}
               />
 
               <PaymentDetails
@@ -87,6 +89,7 @@ const PaymentForm: React.FC = () => {
                 amount={formData.amount}
                 description={formData.description}
                 onFieldChange={handleInputChange}
+                  disabled={paymentsLoading}
               />
 
               <CardInfo
@@ -94,6 +97,7 @@ const PaymentForm: React.FC = () => {
                 expirationDate={formData.expirationDate}
                 securityCode={formData.securityCode}
                 onFieldChange={handleInputChange}
+                  disabled={paymentsLoading}
               />
 
               <div className="flex gap-4 pt-6">
@@ -115,6 +119,7 @@ const PaymentForm: React.FC = () => {
                 </Button>
               </div>
             </form>
+            </div>
           </CardContent>
         </Card>
       </div>
