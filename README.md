@@ -1,5 +1,7 @@
 # CrossPay - Sistema de Pagos
 
+![Imagen del Proyecto](https://res.cloudinary.com/dabwdkdys/image/upload/v1760011826/Screenshot_1_ptrwpl.png)
+
 ## Demo en Vivo
 
 URLs de Producción:
