@@ -11,7 +11,7 @@ URLs de Desarrollo:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:3001/api
 
-## Configuración Instantánea
+## Configuración Instantánea para probar en Local
 
 ```bash
 # 1. Clonar repositorio
