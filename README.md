@@ -17,9 +17,8 @@ URLs de Desarrollo:
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/isjunrod/Crosspay-Solutions-S.A.S.git
-cd Crosspay-Solutions-S.A.S
-
+git clone https://github.com/isjunrod/Crosspay-Solutions.git
+cd Crosspay-Solutions
 # 2. Instalar dependencias
 npm run install:all
 
